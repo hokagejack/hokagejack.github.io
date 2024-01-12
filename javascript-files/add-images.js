@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function () {
   var rightAudio = new Audio();
   var middleAudio = new Audio();
 
-  var progressBar = document.getElementById('bar');
 
   // MOST IMPORTANT FUNCTION: main one to update content
   function updateContent() {
@@ -91,10 +90,11 @@ document.addEventListener('DOMContentLoaded', function () {
       position.currentTime = 0; // reset the audio to the beginning
   }
 
-
+  var progressBar = document.getElementById('bar');
+  
   function progress() {
     // get current width as a number and increment by 15 each submut
-    let currentWidth = parseFloat(progressBar.style.width); 
+    let currentWidth = parseFloat(progressBar.style.width) || 0; 
     currentWidth += 15;
   
     // set the updated width
