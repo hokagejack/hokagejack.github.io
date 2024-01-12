@@ -90,9 +90,9 @@ document.addEventListener('DOMContentLoaded', function () {
       position.currentTime = 0; // reset the audio to the beginning
   }
 
-  var progressBar = document.getElementById('bar');
   
   function progress() {
+    var progressBar = document.getElementById('bar');
     // get current width as a number and increment by 15 each submut
     let currentWidth = parseFloat(progressBar.style.width) || 0; 
     currentWidth += 15;
