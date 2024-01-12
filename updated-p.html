@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>music-taste</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css-styles/general.css">
+  <link rel="stylesheet" href="css-styles/updated-songs.css">
+  <link rel="stylesheet" href="css-styles/intro-slide.css">
+  <link rel="stylesheet" href="css-styles/outro-slide.css">
+
+
+  <script src="javascript-files/intro-slide.js"></script>
+  <script src="javascript-files/objects.js"></script>
+  <script src="javascript-files/add-images.js"></script>
+  <script src="javascript-files/add-points.js"></script>
+  <script src="javascript-files/drag-drop.js"></script>
+  <script src="javascript-files/tally.js"></script>
+  <script src="javascript-files/outro-slide.js"></script>
+  <script src="javascript-files/safe-gaurd.js"></script>
+  
+
+</head>
+
+
+<body>
+  <div id="intro-slide">
+    <h1>Welcome to Genre Selector</h1>
+    <p>You will be repeatedly given three songs to rank in order</p>
+    <p>As you click the submit button, the program will track your preferences</p>
+    <p>The Submut button will only work when 3 unique songs are placed on the podium</p>
+    <p>Once the progress bar hits 100%, you will be given a list of your favorite genres</p>
+    <p>Click anywhere to continue</p>
+  </div>
+
+  <div id="main-content">
+
+    <div class="header">
+      <div class="progress-text">Progress </div>
+      <div class="loading-container">
+        <div class="loading-bar" id="bar"></div>
+      </div>
+    </div>
+  
+    <div class = podium>
+      <div class="number" id="1" ondragstart="dragStart(event)" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+      <div class="number" id="2" ondragstart="dragStart(event)" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+      <div class="number" id="3" ondragstart="dragStart(event)" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+      <img class="pod" src="podium.png">
+      <button class="button" id="submit">Submit</button>
+      <button class="button" id="clear" onclick="clearImages()">Clear Images</button>
+    </div>
+
+    <div class="album">
+      <div class="left-container">
+        <div class="drag-container" id="left-position" ondragstart="dragStart(event)" ondragover="allowDrop(event)" ondrop="drop(event)">
+            <img id="image-left" draggable="true">
+          <div class="tint" id="tint1"></div>
+        </div>
+        <div id="text-left"></div>
+      </div>
+
+      <div class="middle-container">
+        <div class="drag-container" id="middle-position" ondragstart="dragStart(event)" ondragover="allowDrop(event)" ondrop="drop(event)">
+            <img id="image-middle" draggable="true">
+          <div class="tint" id="tint3"></div>
+        </div>
+        <div id="text-middle"></div>
+      </div>
+         
+      <div class="right-container">
+        <div class="drag-container" id="right-position" ondragstart="dragStart(event)" ondragover="allowDrop(event)" ondrop="drop(event)">
+            <img id="image-right" draggable="true">
+          <div class="tint" id="tint2"></div>
+        </div>
+        <div id="text-right"></div>
+      </div>
+      
+    </div>
+    
+    
+  </div>
+
+  <div id="outro-slide" class="outroslide">
+    <div class="text">Here are your top five predicted genres, Go Enjoy some Music!</div>
+    <div class="outro">
+      <div class="num" id="rank-one">
+
+      </div>
+      <div class="num" id="rank-two">
+
+      </div>
+      <div class="num" id="rank-three">
+
+      </div>
+      <div class="num" id="rank-four">
+
+      </div>
+      <div class="num" id="rank-five">
+
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>

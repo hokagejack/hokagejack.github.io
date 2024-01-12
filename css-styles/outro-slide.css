@@ -1,0 +1,60 @@
+.outroslide{
+  z-index: 0;
+  display: none;
+}
+
+
+.outro{
+  display: grid;
+  position: relative;
+  grid-template-areas: 
+    '1 1 1 1'
+    '2 2 2 2'
+    '3 3 3 3'
+    '4 4 4 4'
+    '5 5 5 5';
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 150px 150px 150px 150px 150px;
+  margin-left: 200px;
+}
+
+.text {
+  display: flex;
+  width: 1000px;
+  margin-left: 100px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: underline;
+}
+
+#rank-one {
+  margin-top: 20px;
+  grid-area: 1;
+  display: flex;
+}
+#rank-two {
+  margin-top: 20px;
+  grid-area: 2;
+  display: flex;
+}
+#rank-three {
+  margin-top: 20px;
+  grid-area: 3;
+  display: flex;
+}
+#rank-four {
+  margin-top: 20px;
+  grid-area: 4;
+  display: flex;
+}
+#rank-five {
+  margin-top: 20px;
+  grid-area: 5;
+  display: flex;
+  padding-right: 50px;
+}
+
+.num {
+  font-size: 40px;
+}
